@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VIT-AP</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <!-- Add a logo in the head section -->
+    <link rel="icon" href="formlogo.jpg" type="image/png">
+    <link href="css copy/style.css" rel="stylesheet">
+</head>
+    <style>
+        /* Teacher Profile Styles */
+        .teacher-profile {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            text-align: center;
+        }
+    
+        .teacher-profile img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+    
+        .teacher-profile h6 {
+            font-size: 18px;
+            margin: 0;
+        }
+    
+        .teacher-profile span {
+            font-size: 14px;
+            color: #777;
+        }
+    
+        /* Teacher Details Styles */
+        .teacher-details {
+            margin-top: 30px;
+        }
+    
+        .teacher-details h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    
+        .table-responsive {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    
+        .table {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    
+        .table th,
+        .table td {
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: center;
+        }
+    
+        .table thead th {
+            background-color: #f2f2f2;
+        }
+    
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .teacher-profile {
+                margin-bottom: 20px;
+            }
+    
+            .teacher-profile img {
+                height: 120px;
+                width: 120px;
+            }
+    
+            .teacher-profile h6 {
+                font-size: 16px;
+            }
+    
+            .teacher-profile span {
+                font-size: 12px;
+            }
+    
+            .teacher-details h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+    /* Teacher Profile Styles */
+    .teacher-profile {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .teacher-profile img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    .teacher-profile h6 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .teacher-profile span {
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* Teacher Details Styles */
+    .teacher-details {
+        margin-top: 30px;
+    }
+
+    .teacher-details h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .table-responsive {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .table thead th {
+        background-color: #f2f2f2;
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+        .teacher-profile {
+            margin-bottom: 20px;
+        }
+
+        .teacher-profile img {
+            height: 120px;
+            width: 120px;
+        }
+
+        .teacher-profile h6 {
+            font-size: 16px;
+        }
+
+        .teacher-profile span {
+            font-size: 12px;
+        }
+
+        .teacher-details h3 {
+            font-size: 20px;
+        }
+    }
+</style>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+            <div class="col-lg-3">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-0"><span class="text-primary">VIT</span>AP</h1>
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">location</h6>
+                        <small>VIT-AP University, G-30, Inavolu, Beside AP Secretariat Amaravati, Andhra Pradesh 522237</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
+                        <small> info@vitap.ac.in</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
+                        <small>+91423456789</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+
+     <!-- Navbar Start -->
+     <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+           
+           
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav py-0">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="studentprofile.html" class="nav-item nav-link">Student Profile</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="course.html" class="nav-item nav-link">Courses</a>
+                            <a href="teacher.html" class="nav-item nav-link">Faculty</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            
+                          
+                        </div>
+                        <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">Professors</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Professors</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+<!-- Teachers Part Start -->
+<section id="teachers-page" class="pt-90 pb-120 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="teacher-profile border p-4 mb-4 text-center">
+                    <img src="image7.jpg" alt="DR.SV Kota Reddy" class="img-fluid rounded-circle" style="height: 150px; width: 150px;">
+                    <h6 class="mt-3">DR.SV Kota Reddy</h6>
+                    <span>Vice Chancellor</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="teacher-profile border p-4 mb-4 text-center">
+                    <img src="image8.jpg" alt="Dr.Naresh Sammeta" class="img-fluid rounded-circle" style="height: 150px; width: 150px;">
+                    <h6 class="mt-3">Dr.Naresh Sammeta</h6>
+                    <span>SCOPE</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="teacher-profile border p-4 mb-4 text-center">
+                    <img src="image9.jpg" alt="Ms. M Sneha Goud" class="img-fluid rounded-circle" style="height: 150px; width: 150px;">
+                    <h6 class="mt-3">Ms. M Sneha Goud</h6>
+                    <span>VISH</span>
+                </div>
+            </div>
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="teacher-details">
+                    <h3>Professor Details</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Designation</th>
+                                    <th>Department</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DR.SV Kota Reddy</td>
+                                    <td>Vice Chancellor</td>
+                                    <td>Administration</td>
+                                </tr>
+                                <tr>
+                                    <td>Dr.Naresh Sammeta</td>
+                                    <td>Professor</td>
+                                    <td>SCOPE</td>
+                                </tr>
+                                <tr>
+                                    <td>Ms. M Sneha Goud</td>
+                                    <td>Lecturer</td>
+                                    <td>VISH</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+<!-- Teachers Part End -->
+
+
+
+    <!-- Footer Start -->
+ <!-- Footer Start -->
+<footer class="bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Logo and About Section -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-about mt-40">
+                    <div class="logo">
+                        <a href="#"><img src="formlogo.jpg" alt="Logo" style="max-width: 100px;"></a>
+                    </div>
+                    <p>Apply Knowledge. Improve Life</p>
+                    <ul class="social-icons mt-20">
+                        <li><a href="https://www.facebook.com/vitap.university/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/VITAPuniversity?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://vitap.ac.in/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.instagram.com/vitap.university/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div> <!-- footer about -->
+            </div>
+
+            <!-- Footer Links Section -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-link mt-40">
+                    <div class="footer-title pb-25">
+                        <h6>Sitemap</h6>
+                    </div>
+                    <ul>
+                        <li><a href="index-2.html"><i class="fa fa-angle-right"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
+                        <li><a href="courses.html"><i class="fa fa-angle-right"></i>Courses</a></li>
+                        <li><a href="blog.html"><i class="fa fa-angle-right"></i>News</a></li>
+                        <li><a href="events-singel.html"><i class="fa fa-angle-right"></i>Event</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="teachers.html"><i class="fa fa-angle-right"></i>Teachers</a></li>
+                        <li><a href="contact-2.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                    </ul>
+                </div> <!-- footer link -->
+            </div>
+
+            <!-- Support Section -->
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-link support mt-40">
+                    <div class="footer-title pb-25">
+                        <!-- You can add a title here if needed -->
+                    </div>
+                    <!-- Add content for the support section if needed -->
+                </div> <!-- support -->
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-address mt-40">
+                    <div class="footer-title pb-25">
+                        <h6>Contact Us</h6>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="cont">
+                                <p>VIT-AP University, G-30, Inavolu, Beside AP Secretariat Amaravati, Andhra Pradesh 522237</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="cont">
+                                <p>0863 2370444</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-envelope-o"></i>
+                            </div>
+                            <div class="cont">
+                                <p>info@vitap.ac.in</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- footer address -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</footer>
+<!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
