@@ -11,6 +11,8 @@ Wamp server has been used for local hosting, and JavaScript validation has also 
 ![image](https://github.com/Apa-rna/University-website-and-Academic-Management-System/assets/74657132/62e91300-d0e0-468d-b6ba-c790a9b53158)
 ![image](https://github.com/Apa-rna/University-website-and-Academic-Management-System/assets/74657132/20864730-3733-4ec8-81fa-f7079c2a7a0c)
 ![image](https://github.com/Apa-rna/University-website-and-Academic-Management-System/assets/74657132/e52e6112-5987-4996-8f56-9cbcc2485086)
+![image](https://github.com/Apa-rna/University-website-and-Academic-Management-System/assets/74657132/5c153a14-77e9-4e88-a66f-0899fe05a00e)
+
 
 ![image](https://github.com/Apa-rna/University-website-and-Academic-Management-System/assets/74657132/5758fc65-e108-491b-8cc7-751d0be00133)
 
