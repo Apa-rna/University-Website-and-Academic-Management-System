@@ -1,125 +1,124 @@
-<?php include('admin/includes/dbconnection.php');
+<?php
+session_start();
+error_reporting(0);
+include('includes/dbconnection.php');
+
+if(isset($_POST['login'])) 
+  {
+    $username=$_POST['username'];
+    $password=md5($_POST['password']);
+    $sql ="SELECT ID FROM tbladmin WHERE UserName=:username and Password=:password";
+    $query=$dbh->prepare($sql);
+    $query-> bindParam(':username', $username, PDO::PARAM_STR);
+$query-> bindParam(':password', $password, PDO::PARAM_STR);
+    $query-> execute();
+    $results=$query->fetchAll(PDO::FETCH_OBJ);
+    if($query->rowCount() > 0)
+{
+foreach ($results as $result) {
+$_SESSION['sscmsaid']=$result->ID;
+}
+
+ 
+$_SESSION['login']=$_POST['username'];
+echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";
+} else{
+echo "<script>alert('Invalid Details');</script>";
+}
+}
+
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <title>VIT-AP Student Study Center Mananagement System </title>
-    <!-- Favicon-->
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-</head>
+    <head>
+       
+        <title>Student Study Center Mananagement System  || Login</title>
 
-<body>
-    <!-- Navbar Start -->
-    <div class="container-fluid">
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App CSS -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+        <!-- Modernizr js -->
+        <script src="assets/js/modernizr.min.js"></script>
+
+    </head>
 
 
-        <div class="col-lg-9">
-            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                <a href="" class="text-decoration-none d-block d-lg-none">
-                    <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="studentprofile.html" class="nav-item nav-link">Student Profile</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="course.html" class="nav-item nav-link">Courses</a>
-                        <a href="teacher.html" class="nav-item nav-link">Faculty</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+    <body>
 
+        <div class="account-pages"></div>
+        <div class="clearfix"></div>
+        <div class="wrapper-page">
+
+        	<div class="account-bg">
+                <div class="card-box mb-0">
+                    <strong style="padding-top: 30px;"><a href="../index.php" class="text-muted"><i class="fa fa-home m-r-5"></i> Back Home!!</a> </strong>
+                    <div class="text-center m-t-20">
+                 <h6>Student Study Center Mananagement System </h6>
+                            <span> Admin Login</span>
+                    </div>
+                    <div class="m-t-10 p-20">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h6 class="text-muted text-uppercase m-b-0 m-t-0">Sign In</h6>
+                            </div>
+                        </div>
+                        <form class="m-t-20" action="" method="post">
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="enter your username" required="true" name="username">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input type="password" class="form-control" placeholder="enter your password" name="password" required="true">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group text-center row m-t-10">
+                                <div class="col-12">
+                                    <button class="btn btn-success btn-block waves-effect waves-light" type="submit" name="login">Log In</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group row m-t-30 mb-0">
+                                <div class="col-12">
+                                    <a href="forgot-password.php" class="text-muted"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+                                </div>
+                            </div>
+
+                     
+
+
+                        </form>
 
                     </div>
 
+                    <div class="clearfix"></div>
                 </div>
-            </nav>
-        </div>
-    </div>
-    </div>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar-->
-        <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light" style="font-size:30px;">SSCMS</div>
-            <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.php">Home</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="admin/">Admin</a>
-
             </div>
+            <!-- end card-box-->
+
+
         </div>
-        <!-- Page content wrapper-->
-        <div id="page-content-wrapper">
-            <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active" style="font-size:30px;"> VIT-AP Student Study Center Mananagement System </li>
+        <!-- end wrapper page -->
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="../plugins/switchery/switchery.min.js"></script>
 
+        <!-- App js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
 
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Page content-->
-            <div class="container-fluid" style="padding-top:2%;">
-                <p> VIT's SSCMS is a web-based application developed using PHP and MySQL. In this project administrator can add the students and assign the desk for study.</p>
-                <p>
-                <h5> Desks Status</h5>
-                <hr />
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Desk Number</th>
-                            <th>Laptop / Charger Socket</th>
-                            <th>Current Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-
-                        $sql = "SELECT * from tbldesk ";
-                        $query = $dbh->prepare($sql);
-                        $query->execute();
-                        $results = $query->fetchAll(PDO::FETCH_OBJ);
-
-                        $cnt = 1;
-                        if ($query->rowCount() > 0) {
-                            foreach ($results as $row) {               ?>
-                                <tr>
-                                    <td><?php echo htmlentities($cnt); ?></td>
-                                    <td><?php echo htmlentities($row->deskNumber); ?></td>
-                                    <td><?php $lapchargerscoket = $row->laptopChargerScoket;
-                                        if ($lapchargerscoket == '') : echo "<span style='color:red'>Not Available</span>";
-                                        else : echo "<span style='color:green'>Available</span>";
-                                        endif; ?></td>
-
-                                    <td><?php $occupiedstatus = $row->isOccupied;
-                                        if ($occupiedstatus == '') : echo "<span style='color:green'>Available</span>";
-                                        else : echo "<span style='color:red'>Occupied</span>";
-                                        endif; ?></td>
-                                </tr>
-                        <?php $cnt++;
-                            }
-                        } ?>
-
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-</body>
-
+    </body>
 </html>
